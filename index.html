@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Onja Library</title>
+	</head>
+	<body>
+		<main>
+			<h1>Hit Parade</h1>
+			<section class="add-song">
+				<h2>Add a song</h2>
+				 <form>
+					
+						<label for="title">Song title</label>
+						<input 
+						type="text"
+						id="title" 
+						name="title"
+						placeholder="Title"
+						required />
+					
+						<label for="name">Artist name</label>
+						<input type="text" id="name" placeholder="name" required />
+					
+						<label for="stylesheet"> Music style </label>
+						<select name="style" id="style" required>
+							<option value="slow">Slow</option>
+							<option value="rege">rege</option>
+							<option value="tsapiky">Tsapiky</option>
+							<option value="pop">Pop</option>
+						</select>
+						<label for="length">Song length</label>
+						<input
+							type="number"
+							name="length"
+							id="length"
+							required
+						/>
+						<label for="url">Artist Picture</label>
+					    <input type="url" name="url" id="url" />
+						<button type="submit">Add</button>
+				</form>
+			</section>
+			<section class="section_search">
+				<label for="search">Search a song</label><br>
+				<input type="text" name="search" id="search">
+				<label for="select">Select Style</label><br>
+				<input type ="text" name="select" id="select" > 
+				<button>Reset</button>
+			</section>
+			
+			<section class="section-table">
+				<table>
+					<tbody></tbody>
+				</table>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>

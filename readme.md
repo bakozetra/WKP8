@@ -25,17 +25,26 @@ We're going to build a hit parade.
 Also, please update this readme with the answer to those questions before submitting the project.
 
 ### Student report :
-
 1. In a few sentences, explain the structure of your project.
-
+  - There are seven function in the script file.
+  - I put my html in the first fuction and insert it in the tbody.
+  - The second function store all of the input from html file into the script file and push in into the Object.
+  - I add local storage .
+  - I deleted the icon.
+  - I have created an object which name is **songs**. I store all of my work in that.
 2. If you had more time, what area of your project would you improve?
+ - I will try to make my score work and my url.
+ - I would like to reset it.
 
 3. Did you learn anything new while working on this project?
+    The thing I have learned today is to manage time.
 
 4. What was the most challenging part for you?
+   - The most chanllenge is the score, I don't know to use increment to make the number increase.
+   - I don't know what is wrong with my code but my omage not appear on the table , this is still chalenging to me.
 
 5. Would you like a new explanation about a specific topic?
-
+   I would like if you can explain more about the reference of function .
 6. Any other comments?
 
 Fork this project and then clone your fork to your computer.
@@ -43,3 +52,6 @@ Fork this project and then clone your fork to your computer.
 I will download everybody's fork on **_Sunday at 5pm_**.
 
 Good luck everyone! 🔥
+
+
+
