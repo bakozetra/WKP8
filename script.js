@@ -12,10 +12,11 @@ const showSongs = () => {
             <td class ="left">${song.title} <br>${song.style}</td>
             <td>${song.name} <br> ${song.length}min </td>
             <td>
-              <button value ='${song.id}'onclick="buttonClick()" class ="score">
-              Score : 0
+              <button class ="score">
+                Score : 0
               </button> 
             </td>
+            <td><buttonvalue ='${song.id}' class = "increment">x1</button></td>
             <td>
             <button value='${song.id}' 
                class ="delete" aria-label ="Delete book ${song.title}">
@@ -41,6 +42,7 @@ const addSongs = e => {
         name: formEl.name.value,
         style: formEl.style.value,
         length: formEl.length.value,
+        url : formEl.url.value,
         id : Date.now(),
     };
     // Push the function so that it will restore in the object
@@ -70,12 +72,30 @@ const handleClick = e => {
 
 const score = (e) => {
     console.log(e.target);
-    const checkBtn = e.target.closest('button.score');
-    var i = 0;
-    function buttonClick() {
-        checkBtn.value = ++i;
+    const checkBtn = e.target.closest('button.increment');
+    if(checkBtn) {
+      var id = Number(checkBtn.value);
+      incrementNumber(id);
+      
+  } 
+  const incrementNumber = () => {
+    const instances = songs.reduce((acc, order) => {
+		if (acc[order.id]) {
+			acc[order.id]++;
+		} else {
+			acc[order.id] = 1;
+		}
+		return acc;
+    }, {}); 
+     
+    const addIncrement = Object.entries(instances).map(([songId, number]) => {
+            const numberIncrease = songs.find(song =>song.id === number);
+            return addIncrement;
+        }).join(" ");
+        listOfSong.innerHTML = addIncrement;
     }
-}  
+  } 
+     
 // the initial of the local storage 
 const initLocalStorage = () => { 
     const songList = JSON.parse(localStorage.getItem('songs'));
